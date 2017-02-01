@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelperNamaProvinsi = new DBHelperNamaProvinsi(this);
         dbHelperNamaProvinsi.loadContent();
 
-        String HD;
+
 
         initAutoCompleteNamaProv();
         initAutoCompleteNamaProvDB();
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, namaProvinsi);
         actext_namaprov.setAdapter(adapter);
         actext_namaprov.setThreshold(1);
-        String ubahsesuatu;
+
 
         actext_namaprov.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
