@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelperNamaProvinsi = new DBHelperNamaProvinsi(this);
         dbHelperNamaProvinsi.loadContent();
 
+
         initAutoCompleteNamaProv();
         initAutoCompleteNamaProvDB();
     }
