@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         dbHelperNamaProvinsi = new DBHelperNamaProvinsi(this);
         dbHelperNamaProvinsi.loadContent();
-        String xml = "hello world";
 
         initAutoCompleteNamaProv();
         initAutoCompleteNamaProvDB();
