@@ -1,25 +1,19 @@
 package com.farizdotid.belajarautocomplete;
 
-import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.Toast;
-
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-
+    String[] namaProvinsi = {"Jawa Barat", "Jawa Timur", "Jawa Tengah", "Kalimantan", "Sulawesi", "Bali"};
     private AutoCompleteTextView actext_namaprov;
     private AutoCompleteTextView actext_namaprovdb;
-    String[] namaProvinsi = {"Jawa Barat", "Jawa Timur", "Jawa Tengah", "Kalimantan", "Sulawesi", "Bali"};
     private DBHelperNamaProvinsi dbHelperNamaProvinsi;
 
     @Override
@@ -29,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
         dbHelperNamaProvinsi = new DBHelperNamaProvinsi(this);
         dbHelperNamaProvinsi.loadContent();
+        String xml = "hello world";
 
         initAutoCompleteNamaProv();
         initAutoCompleteNamaProvDB();
     }
 
-    private void initAutoCompleteNamaProv(){
+    private void initAutoCompleteNamaProv() {
         actext_namaprov = (AutoCompleteTextView) findViewById(R.id.actext_namaprov);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, namaProvinsi);
@@ -49,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initAutoCompleteNamaProvDB(){
+    private void initAutoCompleteNamaProvDB() {
         actext_namaprovdb = (AutoCompleteTextView) findViewById(R.id.actext_namaprovdb);
 
         String hello = "Hell-o";
