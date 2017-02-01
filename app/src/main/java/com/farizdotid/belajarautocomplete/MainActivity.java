@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelperNamaProvinsi = new DBHelperNamaProvinsi(this);
         dbHelperNamaProvinsi.loadContent();
 
+        String HD;
 
         initAutoCompleteNamaProv();
         initAutoCompleteNamaProvDB();
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private void initAutoCompleteNamaProvDB() {
         actext_namaprovdb = (AutoCompleteTextView) findViewById(R.id.actext_namaprovdb);
 
-        String hello = "Hell-o";
 
         final String[] namaProvDB = dbHelperNamaProvinsi.SelectAllDataNamaProv();
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, namaProvDB);
