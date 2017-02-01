@@ -31,6 +31,7 @@
 
     <LinearLayout
         android:layout_below="@id/layout_1"
+        android:id="@+id/layout_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -48,6 +49,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Text Auto Complete DB"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
     </LinearLayout>
 
     <TextView

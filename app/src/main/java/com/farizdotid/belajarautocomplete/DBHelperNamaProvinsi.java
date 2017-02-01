@@ -23,8 +23,11 @@ public class DBHelperNamaProvinsi extends SQLiteOpenHelper {
     private static final String KEY_IDPROV = "id";
     private static final String KEY_NAMAPROV = "namaprovinsi";
 
+    private Context mContext;
+
     public DBHelperNamaProvinsi(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.mContext = context;
     }
 
     @Override
@@ -89,4 +92,5 @@ public class DBHelperNamaProvinsi extends SQLiteOpenHelper {
             return null;
         }
     }
+
 }
